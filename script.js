@@ -53,6 +53,7 @@ function getMealRecipe(e) {
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
             .then(response => response.json())
             .then(data => mealRecipeModal(data.meals));
+            
     }
 }
 
@@ -64,19 +65,24 @@ function mealRecipeModal(meal) {
     let html = `
     <h2 class="recipe-title">${meal.strMeal}</h2>
     <p class="recipe-category">${meal.strCategory}</p>
+    <iframe src="https://www.youtube.com/embed/${vidCode}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
     <div class="recipe-instruct">
         <h3 class="Instruction"></h3>
         <p>${meal.strInstructions}</p>
     </div>
-    <div class="recipe-meal-img">
-        <img src="${meal.strMealThumb}" alt="">
-    </div>
     <div class="recipe-link">
-        <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+        <a href="#" id="show-ingredient" target="_blank">Show Ingredients <i class="fa-solid fa-arrow-down"></i></a>
     </div>
-    <iframe src="https://www.youtube.com/embed/${vidCode}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     `;
     mealDetailsContentEl.innerHTML = html;
     mealDetailsContentEl.parentElement.classList.add('showRecipe');
-
 }
+
+{/* 
+<div class="recipe-meal-img">
+        <img src="${meal.strMealThumb}" alt="">
+</div>
+<div class="recipe-link">
+        <a href="${meal.strYoutube}" target="_blank">Watch Video</a>
+</div> */}
