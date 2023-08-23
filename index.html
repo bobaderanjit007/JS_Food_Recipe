@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     <div class="container">
         <div class="meal-wrapper">
@@ -19,12 +23,12 @@
                 <blockquote>"Simply input the ingredients and discover a delightful meal tailored just for you!"<br>
                     <!-- <cite>- Search ingredients</cite> -->
                 </blockquote>
-                <div class="meal-search-box">
+                <form onsubmit={getMealList} class="meal-search-box">
                     <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
                     <button class="search-btn btn" id="search-btn">
                         <i class="fas fa-search"></i>
                     </button>
-                </div>
+                </form>
             </div>
             <div class="meal-result">
                 <h2 class="title">Your Search Results:</h2>
@@ -40,7 +44,7 @@
                         </div>
                     </div> -->
                     <!-- end of meal item -->
-                    
+
                 </div>
             </div>
             <div class="meal-details">
@@ -63,7 +67,7 @@
                     <div class="recipe-link">
                         <a href="#" target="_blank">Watch Video</a>
                     </div> -->
-                    
+
                 </div>
             </div>
         </div>
@@ -73,4 +77,5 @@
     </footer>
 </body>
 <script src="script.js"></script>
+
 </html>
