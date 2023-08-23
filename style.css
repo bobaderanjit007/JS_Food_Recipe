@@ -212,7 +212,7 @@ body{
 }
 
 .meal-details-content p:not(.recipe-category){
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 }
 
 .recipe-close-btn{
@@ -264,12 +264,12 @@ body{
 }
 
 .recipe-link{
-    margin: 1.4rem 0;
+    margin: 2rem 0 1rem 0;
 }
 .recipe-link a {
     color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1.1rem;
+    font-weight: 600;
     text-decoration: none;
     transition: all .3s linear;
 }
